@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "Sora-Bold";
+    src: url("../../_shared_assets/fonts/Sora-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Sora-ExtraBold";
+    src: url("../../_shared_assets/fonts/Sora-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Sora-Light";
+    src: url("../../_shared_assets/fonts/Sora-Light.ttf");
+}
+
+@font-face {
+    font-family: "Sora-Regular";
+    src: url("../../_shared_assets/fonts/Sora-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+    font-family: "Sora-Light";
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    color: #000;
+    font-size: 24px;
+}
+
+#infoPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+}
+
+#sourceBG {
+    height: 300px;
+    width: auto;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#buttonPanel {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: orange;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: "Sora-Bold";
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+#savedBeatmapsSection {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#savedBeatmapsSection h3 {
+    margin: 0 0 10px 0;
+    font-family: "Sora-Bold";
+}
+
+#savedBeatmapsList {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+#savedBeatmapsList li {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+}
