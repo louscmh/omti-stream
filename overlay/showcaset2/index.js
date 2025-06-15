@@ -139,7 +139,7 @@ class ShowcaseManager {
             if (i == 0) {
                 this.pickSource.style.filter = "blur(0px)";
             } else {
-                this.pickSource.style.filter = "blur(10px)";
+                this.pickSource.style.filter = "blur(14px)";
             }
 
             this.pickName.innerHTML = this.beatmapSet[i]["pick"];
@@ -179,10 +179,30 @@ class ShowcaseManager {
             if (index == this.revealed+moveIndex-3) {
                 pickSource.style.filter = "blur(0px)";
             } else {
-                pickSource.style.filter = "blur(10px)";
+                pickSource.style.filter = "blur(14px)";
             }
         })
         this.revealed += moveIndex;
+    }
+    hideall() {
+        let distance = 332+18;
+        this.pickQueueAsset.style.transform = `translateX(0px)`;
+        this.beatmapSet.map((beatmap, index) => {
+            let pickName = document.getElementById(`${index}pickName`);
+            let pickOverlay = document.getElementById(`${index}pickOverlay`);
+            let pickSource = document.getElementById(`${index}pickSource`);
+            if (index < this.revealed+1) {
+                pickName.style.opacity = 1;
+                pickOverlay.style.backgroundImage = "linear-gradient(to right, rgba(0,0,0,0.5) ,rgba(0,0,0,0.5))";
+                pickSource.style.opacity = 1;
+            } else {
+                pickName.style.opacity = 0;
+                pickOverlay.style.backgroundImage = "linear-gradient(to right, rgba(0,0,0,1) ,rgba(0,0,0,0))";
+                pickSource.style.opacity = 0;
+            }
+            pickSource.style.filter = "blur(14px)";
+        })
+        this.revealed = 3;
     }
     updateDetails(data) {
         this.stinger.play();
@@ -244,6 +264,8 @@ class ShowcaseManager {
             }
             this.move(index-this.currentPick);
             this.currentPick = index;
+        } else {
+            this.hideall();
         }
 
         setTimeout(function() {
