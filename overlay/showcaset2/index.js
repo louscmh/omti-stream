@@ -81,7 +81,7 @@ class ShowcaseManager {
         this.clientAsset = document.getElementById("client");
         this.beatmapDetailsAsset = document.getElementById("beatmapDetails");
         this.pickMaskAsset = document.getElementById("pickMask");
-        this.modpoolAsset = document.getElementById("modpool");
+        // this.modpoolAsset = document.getElementById("modpool");
         this.songTitleAsset = document.getElementById("songTitle");
         this.artistTitleAsset = document.getElementById("artistTitle");
         this.sourceAsset = document.getElementById("source");
@@ -285,7 +285,7 @@ class ShowcaseManager {
             this.csAsset.innerHTML = (mod == "FM" || mod == "HR") ? `${Number(memoryCS).toFixed(1)} (${Number(modCS).toFixed(1)})` : Number(memoryCS).toFixed(1);
             this.bpmAsset.innerHTML = min === max ? min : `${min} - ${max}`;
             this.lengthAsset.innerHTML = parseTime(full);
-            this.modpoolAsset.innerHTML = mod == "TB" ? "&#8202;TB" : mod;
+            // this.modpoolAsset.innerHTML = mod == "TB" ? "&#8202;TB" : mod;
         
             // BG
             try {
