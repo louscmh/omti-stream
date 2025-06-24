@@ -76,15 +76,15 @@ socket.onmessage = async event => {
 
     // NORMAL CODE
 
-    // tempLeft = data.tourney.manager.teamName.left;
-    tempLeft = "Harumi Ena";
+    tempLeft = data.tourney.manager.teamName.left;
+    // tempLeft = "Harumi Ena";
 
     if (tempLeft != leftTeam && tempLeft != "" && !playersSetup) {
         leftTeam = tempLeft;
         playersSetup = true;
         setTimeout(function (event) {
-            // matchManager.updatePlayerId([data.tourney.manager.teamName.left, data.tourney.manager.teamName.right])
-            matchManager.updatePlayerId(["Harumi Ena", "mabayu"])
+            matchManager.updatePlayerId([data.tourney.manager.teamName.left, data.tourney.manager.teamName.right])
+            // matchManager.updatePlayerId(["Harumi Ena", "mabayu"])
         }, 150);
     }
 
