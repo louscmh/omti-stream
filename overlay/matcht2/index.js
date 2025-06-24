@@ -19,15 +19,15 @@ let seedData = [];
 let currentStage;
 (async () => {
     try {
-        const jsonData = await $.getJSON("../../_data/beatmaps_t1.json");
+        const jsonData = await $.getJSON("../../_data/beatmaps_t2.json");
         jsonData.map((beatmap) => {
             beatmapSet.push(beatmap);
         });
-        const jsonData_2 = await $.getJSON("../../_data/seeding_t1.json");
+        const jsonData_2 = await $.getJSON("../../_data/seeding_t2.json");
         jsonData_2.Teams.map((seed) => {
             seedData.push(seed);
         });
-        const jsonData_3 = await $.getJSON("../../_data/stage_t1.json");
+        const jsonData_3 = await $.getJSON("../../_data/stage_t2.json");
         jsonData_3.map((stage, index) => {
             if (index == 0) {
                 currentStage = stage.currentStage;
@@ -77,14 +77,14 @@ socket.onmessage = async event => {
     // NORMAL CODE
 
     // tempLeft = data.tourney.manager.teamName.left;
-    tempLeft = "Harumi Ena";
+    tempLeft = "Axorite";
 
     if (tempLeft != leftTeam && tempLeft != "" && !playersSetup) {
         leftTeam = tempLeft;
         playersSetup = true;
         setTimeout(function (event) {
             // matchManager.updatePlayerId([data.tourney.manager.teamName.left, data.tourney.manager.teamName.right])
-            matchManager.updatePlayerId(["Harumi Ena", "mabayu"])
+            matchManager.updatePlayerId(["Axorite", "Sonic-"])
         }, 150);
     }
 

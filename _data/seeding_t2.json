@@ -1,0 +1,148 @@
+{
+  "Teams": [
+    {
+      "FullName": "Axorite",
+      "Acronym": "Axo",
+      "FlagName": "MY",
+      "Seed": "#1",
+      "Players": [
+        { "id": 9124278 }
+      ]
+    },
+    {
+      "FullName": "Sonic-",
+      "Acronym": "Son",
+      "FlagName": "MY",
+      "Seed": "#2",
+      "Players": [
+        { "id": 8691555 }
+      ]
+    },
+    {
+      "FullName": "GG_com2016",
+      "Acronym": "GG_",
+      "FlagName": "MY",
+      "Seed": "#3",
+      "Players": [
+        { "id": 9229968 }
+      ]
+    },
+    {
+      "FullName": "CelestiaKT",
+      "Acronym": "Cel",
+      "FlagName": "MY",
+      "Seed": "#4",
+      "Players": [
+        { "id": 26357728 }
+      ]
+    },
+    {
+      "FullName": "Lollicornzi",
+      "Acronym": "Lol",
+      "FlagName": "MY",
+      "Seed": "#5",
+      "Players": [
+        { "id": 14454744 }
+      ]
+    },
+    {
+      "FullName": "Makimm",
+      "Acronym": "Mak",
+      "FlagName": "MY",
+      "Seed": "#6",
+      "Players": [
+        { "id": 20307190 }
+      ]
+    },
+    {
+      "FullName": "ManzMalaya",
+      "Acronym": "Man",
+      "FlagName": "MY",
+      "Seed": "#7",
+      "Players": [
+        { "id": 3999924 }
+      ]
+    },
+    {
+      "FullName": "Alippie",
+      "Acronym": "Ali",
+      "FlagName": "MY",
+      "Seed": "#8",
+      "Players": [
+        { "id": 8391159 }
+      ]
+    },
+    {
+      "FullName": "daruly",
+      "Acronym": "dar",
+      "FlagName": "MY",
+      "Seed": "#9",
+      "Players": [
+        { "id": 16099730 }
+      ]
+    },
+    {
+      "FullName": "DemonRu",
+      "Acronym": "Dem",
+      "FlagName": "MY",
+      "Seed": "#10",
+      "Players": [
+        { "id": 25016898 }
+      ]
+    },
+    {
+      "FullName": "Trixn",
+      "Acronym": "Tri",
+      "FlagName": "MY",
+      "Seed": "#11",
+      "Players": [
+        { "id": 19907006 }
+      ]
+    },
+    {
+      "FullName": "YipHan",
+      "Acronym": "Yip",
+      "FlagName": "MY",
+      "Seed": "#12",
+      "Players": [
+        { "id": 18361852 }
+      ]
+    },
+    {
+      "FullName": "ineedyou",
+      "Acronym": "ine",
+      "FlagName": "MY",
+      "Seed": "#13",
+      "Players": [
+        { "id": 16263436 }
+      ]
+    },
+    {
+      "FullName": "Tmpura",
+      "Acronym": "Tmp",
+      "FlagName": "MY",
+      "Seed": "#14",
+      "Players": [
+        { "id": 16452667 }
+      ]
+    },
+    {
+      "FullName": "Welon",
+      "Acronym": "Wel",
+      "FlagName": "MY",
+      "Seed": "#15",
+      "Players": [
+        { "id": 6574787 }
+      ]
+    },
+    {
+      "FullName": "IvanOfficial",
+      "Acronym": "Iva",
+      "FlagName": "MY",
+      "Seed": "#16",
+      "Players": [
+        { "id": 12818249 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "Teams": [
+    {
+      "FullName": "Harumi Ena",
+      "Acronym": "Har",
+      "FlagName": "MY",
+      "Seed": "#1",
+      "Players": [
+        { "id": 16436446 }
+      ]
+    },
+    {
+      "FullName": "mabayu",
+      "Acronym": "mab",
+      "FlagName": "MY",
+      "Seed": "#2",
+      "Players": [
+        { "id": 11918602 }
+      ]
+    },
+    {
+      "FullName": "Rampax",
+      "Acronym": "Ram",
+      "FlagName": "MY",
+      "Seed": "#3",
+      "Players": [
+        { "id": 3995630 }
+      ]
+    },
+    {
+      "FullName": "Snowy5441",
+      "Acronym": "Sno",
+      "FlagName": "MY",
+      "Seed": "#4",
+      "Players": [
+        { "id": 13865320 }
+      ]
+    },
+    {
+      "FullName": "AHotDawg",
+      "Acronym": "AHo",
+      "FlagName": "MY",
+      "Seed": "#5",
+      "Players": [
+        { "id": 15271985 }
+      ]
+    },
+    {
+      "FullName": "stumphole145",
+      "Acronym": "stu",
+      "FlagName": "MY",
+      "Seed": "#6",
+      "Players": [
+        { "id": 14623152 }
+      ]
+    },
+    {
+      "FullName": "iraozm",
+      "Acronym": "ira",
+      "FlagName": "MY",
+      "Seed": "#7",
+      "Players": [
+        { "id": 12443104 }
+      ]
+    },
+    {
+      "FullName": "Chibi Maruko",
+      "Acronym": "Chi",
+      "FlagName": "MY",
+      "Seed": "#8",
+      "Players": [
+        { "id": 5585377 }
+      ]
+    },
+    {
+      "FullName": "not_aweeb",
+      "Acronym": "not",
+      "FlagName": "MY",
+      "Seed": "#9",
+      "Players": [
+        { "id": 9375317 }
+      ]
+    },
+    {
+      "FullName": "steering wheel",
+      "Acronym": "ste",
+      "FlagName": "MY",
+      "Seed": "#10",
+      "Players": [
+        { "id": 13359670 }
+      ]
+    },
+    {
+      "FullName": "Agagak",
+      "Acronym": "Aga",
+      "FlagName": "MY",
+      "Seed": "#11",
+      "Players": [
+        { "id": 3645490 }
+      ]
+    },
+    {
+      "FullName": "seoster",
+      "Acronym": "seo",
+      "FlagName": "MY",
+      "Seed": "#12",
+      "Players": [
+        { "id": 12841949 }
+      ]
+    },
+    {
+      "FullName": "Nabari Anju",
+      "Acronym": "Nab",
+      "FlagName": "MY",
+      "Seed": "#13",
+      "Players": [
+        { "id": 9773374 }
+      ]
+    },
+    {
+      "FullName": "ohshitweeb",
+      "Acronym": "ohs",
+      "FlagName": "MY",
+      "Seed": "#14",
+      "Players": [
+        { "id": 12999285 }
+      ]
+    },
+    {
+      "FullName": "Leeoch",
+      "Acronym": "Lee",
+      "FlagName": "MY",
+      "Seed": "#15",
+      "Players": [
+        { "id": 19957490 }
+      ]
+    },
+    {
+      "FullName": "MadDdDio",
+      "Acronym": "Mad",
+      "FlagName": "MY",
+      "Seed": "#16",
+      "Players": [
+        { "id": 15086959 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+[
+    {
+        "currentStage": "S1"
+    },
+    {
+        "stage": "QL",
+        "showcase": "../../_shared_assets/design/showcase_text_quals.png",
+        "stageName": "Qualifiers",
+        "overviewText": "1 Run"
+    },
+    {
+        "stage": "S1",
+        "showcase": "../../_shared_assets/design/showcase_text_ro64.png",
+        "stageName": "Tier 2 Stage 1",
+        "overviewText": "BO9",
+        "firstTo": 5
+    },
+    {
+        "stage": "S2",
+        "showcase": "../../_shared_assets/design/showcase_text_ro32.png",
+        "stageName": "Tier 2 Stage 2",
+        "overviewText": "BO11",
+        "firstTo": 6
+    }
+]

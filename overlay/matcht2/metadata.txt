@@ -1,5 +1,5 @@
-Usecase: obs-overlay
-Name: EGTS-SCHEDULES
+Usecase: obs-tourney
+Name: EGTS-MATCH
 Author: lous
 CompatibleWith: gosu,tosu
 Resolution: 1920x1080
