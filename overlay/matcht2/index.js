@@ -1119,8 +1119,8 @@ class MatchManager {
         this.bottomPlayerTwoPfp.setAttribute("src", `https://a.ppy.sh/${this.rightPlayerData.user_id}`);
         this.bottomPlayerOneName.innerHTML = playerId[0];
         this.bottomPlayerTwoName.innerHTML = playerId[1];
-        this.bottomPlayerOneSeed.innerHTML = `Seed #${seedData.find(seed => seed["Players"][0].id == this.leftPlayerData.user_id)["Seed"].match(/\d+/)[0]}`;
-        this.bottomPlayerTwoSeed.innerHTML = `Seed #${seedData.find(seed => seed["Players"][0].id == this.rightPlayerData.user_id)["Seed"].match(/\d+/)[0]}`;
+        this.bottomPlayerOneSeed.innerHTML = `Rank #${this.leftPlayerData.pp_rank}&nbsp&nbspSeed #${seedData.find(seed => seed["Players"][0].id == this.leftPlayerData.user_id)["Seed"].match(/\d+/)[0]}`;
+        this.bottomPlayerTwoSeed.innerHTML = `Rank #${this.rightPlayerData.pp_rank}&nbsp&nbspSeed #${seedData.find(seed => seed["Players"][0].id == this.rightPlayerData.user_id)["Seed"].match(/\d+/)[0]}`;
 
         this.introPlayerOnePfp.setAttribute("src", `https://a.ppy.sh/${this.leftPlayerData.user_id}`);
         this.introPlayerTwoPfp.setAttribute("src", `https://a.ppy.sh/${this.rightPlayerData.user_id}`);
