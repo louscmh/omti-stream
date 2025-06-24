@@ -54,7 +54,7 @@ const beatmapsStore = new Set(); // Store beatmapID;
 setInterval(async () => {
     if (!initialized) return;
     try {
-        const data = await $.getJSON("../../../_data/sample_data.json");
+        const data = await $.getJSON("../../_data/sample_data.json");
         console.log(data);
 
         if (!hasSetupBeatmaps) {
@@ -1871,7 +1871,7 @@ class HistoryManager {
         let index = 0;
         for (let round of this.rounds) {
             if (canGenerate) {
-                canGenerate = round == stages.find(stage => stage.stage == currentStage)["stageName"] ? false : true;
+                canGenerate = round == stages.find(stage => stage.stageName == currentStage)["stage"] ? false : true;
                 const stageMatches = await getSchedules(round);
                 const leftMatches = stageMatches
                     .filter(match => (match.score1 == -1 || match.score2 == -1 || match.score1 > 4 || match.score2 > 4))
