@@ -1,0 +1,319 @@
+{
+    "settings": {
+        "showInterface": true,
+        "folders": {
+            "game": "C:\\Users\\louis\\AppData\\Local\\osu_tourney",
+            "skin": "User",
+            "songs": "C:\\Users\\louis\\AppData\\Local\\osu_tourney\\Songs"
+        }
+    },
+    "menu": {
+        "mainMenu": {
+            "bassDensity": 0
+        },
+        "state": 22,
+        "gameMode": 0,
+        "isChatEnabled": 0,
+        "bm": {
+            "time": {
+                "firstObj": 578,
+                "current": 46400,
+                "full": 62159,
+                "mp3": 64197
+            },
+            "id": 4990491,
+            "set": 2327670,
+            "md5": "a579026b9998834cdd0be87640e197ca",
+            "rankedStatus": 0,
+            "metadata": {
+                "artist": "Ichien",
+                "artistOriginal": "壱円",
+                "title": "Science Craft",
+                "titleOriginal": "サイエンスクラフト",
+                "mapper": "Vanya",
+                "difficulty": "Note(b)lock"
+            },
+            "stats": {
+                "AR": 9.8,
+                "CS": 4.2,
+                "OD": 9.4,
+                "HP": 5,
+                "SR": 0,
+                "BPM": {
+                    "common": 188,
+                    "min": 188,
+                    "max": 188
+                },
+                "circles": 155,
+                "sliders": 183,
+                "spinners": 0,
+                "holds": 0,
+                "maxCombo": 541,
+                "fullSR": 6.58,
+                "memoryAR": 9.8,
+                "memoryCS": 4.2,
+                "memoryOD": 9.4,
+                "memoryHP": 5
+            },
+            "path": {
+                "full": "2327670 Ichien - Science Craft\\ce33d9e2-0a70-4d35-8287-26115ae738cc.jpg",
+                "folder": "2327670 Ichien - Science Craft",
+                "file": "Ichien - Science Craft (Vanya) [Note(b)lock].osu",
+                "bg": "ce33d9e2-0a70-4d35-8287-26115ae738cc.jpg",
+                "audio": "audio.ogg"
+            }
+        },
+        "mods": {
+            "num": 0,
+            "str": ""
+        }
+    },
+    "gameplay": {
+        "gameMode": 0,
+        "name": "",
+        "score": 0,
+        "accuracy": 0,
+        "combo": {
+            "current": 0,
+            "max": 0
+        },
+        "hp": {
+            "normal": 0,
+            "smooth": 0
+        },
+        "hits": {
+            "0": 0,
+            "50": 0,
+            "100": 0,
+            "300": 0,
+            "geki": 0,
+            "katu": 0,
+            "sliderBreaks": 0,
+            "grade": {
+                "current": "",
+                "maxThisPlay": ""
+            },
+            "unstableRate": 0,
+            "hitErrorArray": []
+        },
+        "pp": {
+            "current": 0,
+            "fc": 0,
+            "maxThisPlay": 0
+        },
+        "keyOverlay": {
+            "k1": {
+                "isPressed": false,
+                "count": 0
+            },
+            "k2": {
+                "isPressed": false,
+                "count": 0
+            },
+            "m1": {
+                "isPressed": false,
+                "count": 0
+            },
+            "m2": {
+                "isPressed": false,
+                "count": 0
+            }
+        },
+        "leaderboard": {
+            "hasLeaderboard": false,
+            "isVisible": false,
+            "ourplayer": {
+                "name": "",
+                "score": 0,
+                "combo": 0,
+                "maxCombo": 0,
+                "mods": "",
+                "h300": 0,
+                "h100": 0,
+                "h50": 0,
+                "h0": 0,
+                "team": 0,
+                "position": 0,
+                "isPassing": 0
+            },
+            "slots": []
+        },
+        "_isReplayUiHidden": false
+    },
+    "resultsScreen": {
+        "0": 0,
+        "50": 0,
+        "100": 0,
+        "300": 0,
+        "mode": 0,
+        "name": "",
+        "score": 0,
+        "maxCombo": 0,
+        "mods": {
+            "num": 0,
+            "str": ""
+        },
+        "geki": 0,
+        "katu": 0,
+        "createdAt": ""
+    },
+    "userProfile": {
+        "rawLoginStatus": 65793,
+        "name": "lous",
+        "accuracy": 98.55,
+        "rankedScore": 34953659226,
+        "id": 6231292,
+        "level": 101.36205291748047,
+        "playCount": 60874,
+        "playMode": 0,
+        "rank": 13063,
+        "countryCode": 1110437449,
+        "performancePoints": 153,
+        "rawBanchoStatus": -105,
+        "backgroundColour": "ff010101"
+    },
+    "tourney": {
+        "manager": {
+            "ipcState": 1,
+            "bestOF": 9,
+            "teamName": {
+                "left": "Harumi Ena",
+                "right": "Mabayu"
+            },
+            "stars": {
+                "left": 5,
+                "right": 4
+            },
+            "bools": {
+                "scoreVisible": false,
+                "starsVisible": true
+            },
+            "chat": [
+                {
+                    "team": "bot",
+                    "time": "22:49",
+                    "name": "BanchoBot",
+                    "messageBody": "Match history available here."
+                },
+                {
+                    "team": "left",
+                    "time": "22:50",
+                    "name": "Harumi Ena",
+                    "messageBody": "Hello, good luck!"
+                },
+                {
+                    "team": "right",
+                    "time": "22:51",
+                    "name": "Mabayu",
+                    "messageBody": "Thanks, you too!"
+                },
+                {
+                    "team": "bot",
+                    "time": "22:52",
+                    "name": "lous",
+                    "messageBody": "im like hey what's up hello"
+                }
+            ],
+            "gameplay": {
+                "score": {
+                    "left": 0,
+                    "right": 0
+                }
+            }
+        },
+        "ipcClients": [
+            {
+                "team": "left",
+                "spectating": {
+                    "name": "",
+                    "country": "",
+                    "userID": 0,
+                    "accuracy": 0,
+                    "rankedScore": 0,
+                    "playCount": 0,
+                    "globalRank": 0,
+                    "totalPP": 0
+                },
+                "gameplay": {
+                    "gameMode": 0,
+                    "name": "",
+                    "score": 0,
+                    "accuracy": 0,
+                    "combo": {
+                        "current": 0,
+                        "max": 0
+                    },
+                    "hp": {
+                        "normal": 0,
+                        "smooth": 0
+                    },
+                    "hits": {
+                        "0": 0,
+                        "50": 0,
+                        "100": 0,
+                        "300": 0,
+                        "geki": 0,
+                        "katu": 0,
+                        "sliderBreaks": 0,
+                        "grade": {
+                            "current": "",
+                            "maxThisPlay": ""
+                        },
+                        "unstableRate": 0,
+                        "hitErrorArray": []
+                    },
+                    "mods": {
+                        "num": 0,
+                        "str": ""
+                    }
+                }
+            },
+            {
+                "team": "right",
+                "spectating": {
+                    "name": "",
+                    "country": "",
+                    "userID": 0,
+                    "accuracy": 0,
+                    "rankedScore": 0,
+                    "playCount": 0,
+                    "globalRank": 0,
+                    "totalPP": 0
+                },
+                "gameplay": {
+                    "gameMode": 0,
+                    "name": "",
+                    "score": 0,
+                    "accuracy": 0,
+                    "combo": {
+                        "current": 0,
+                        "max": 0
+                    },
+                    "hp": {
+                        "normal": 0,
+                        "smooth": 0
+                    },
+                    "hits": {
+                        "0": 0,
+                        "50": 0,
+                        "100": 0,
+                        "300": 0,
+                        "geki": 0,
+                        "katu": 0,
+                        "sliderBreaks": 0,
+                        "grade": {
+                            "current": "",
+                            "maxThisPlay": ""
+                        },
+                        "unstableRate": 0,
+                        "hitErrorArray": []
+                    },
+                    "mods": {
+                        "num": 0,
+                        "str": ""
+                    }
+                }
+            }
+        ]
+    }
+}
