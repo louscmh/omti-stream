@@ -1,6 +1,6 @@
 [
     {
-        "currentStage": "S1"
+        "currentStage": "S2"
     },
     {
         "stage": "QL",
@@ -10,14 +10,14 @@
     },
     {
         "stage": "S1",
-        "showcase": "../../_shared_assets/design/showcase_text_ro64.png",
+        "showcase": "../../_shared_assets/design/showcase_text_quals.png",
         "stageName": "Tier 1 Stage 1",
         "overviewText": "BO9",
         "firstTo": 5
     },
     {
         "stage": "S2",
-        "showcase": "../../_shared_assets/design/showcase_text_ro32.png",
+        "showcase": "../../_shared_assets/design/showcase_text_quals.png",
         "stageName": "Tier 2 Stage 2",
         "overviewText": "BO11",
         "firstTo": 6
