@@ -126,13 +126,13 @@
     /* background-color: rgba(255,255,255,0.5); */
     display:flex;
     flex-direction: column;
-    color: black;
+    color: white;
 }
 
 #sourceContainer {
     height:225px;
     width:inherit;
-    border: 2px solid black;
+    border: 2px solid white;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -142,7 +142,7 @@
 #sourceLining {
     height:225px;
     width:inherit;
-    border: 2px solid black;
+    border: 2px solid white;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -156,8 +156,8 @@
 	/* filter: brightness(70%) url("#sharpBlur"); */
 	object-fit: cover;
 	object-position: center;
-    height:225px;
-    width:inherit;
+    height:224px;
+    width:440px;
     z-index: 4;
 }
 
@@ -178,7 +178,7 @@
 
 #customText {
     font-size:16px;
-    color:black;
+    color:white;
     margin-right:18px;
     margin-top:20px;
     display:flex;

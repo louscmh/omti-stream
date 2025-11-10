@@ -78,6 +78,7 @@ copyJSON.addEventListener("click", async function () {
       return {
         beatmapId: beatmapId,
         pick: "",
+        originalSR: item.menu.bm.stats.fullSR,
         modSR: null,
         customSong: false,
         collab: "",
