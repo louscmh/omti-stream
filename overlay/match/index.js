@@ -159,7 +159,7 @@ let beatmapSet = [];
 let beatmapIDS = [];
 (async () => {
     try {
-        const jsonData = await $.getJSON("../../_data/beatmaps_showcase_t1.json");
+        const jsonData = await $.getJSON("../../_data/beatmaps.json");
         jsonData.map((beatmap) => {
             beatmapSet.push(beatmap);
         });
@@ -916,6 +916,9 @@ async function updateBeatmapDetails(data) {
     // }
 
     // CHECKER FOR MAPPICK & MODS (TO RECALCULATE STATS)
+    // console.log(beatmapIDS.includes(id));
+    // console.log(beatmapIDS);
+    // console.log(id);
     if (beatmapIDS.includes(id)) {
         pick = beatmapSet.find(beatmap => beatmap["beatmapId"] === id)["pick"];
         customMappers = beatmapSet.find(beatmap => beatmap["beatmapId"] === id)?.["mappers"].join(", ");
