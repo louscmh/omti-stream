@@ -23,6 +23,7 @@ class ScoreTracker {
         this.currentState = 0;
         this.leftClients = [];
         this.rightClients = [];
+        this.currentMap = 0;
     }
     addClient(client, isLeft) {
         if (isLeft) {
@@ -36,7 +37,7 @@ class ScoreTracker {
             const client = index < 4 ? this.leftClients[index] : this.rightClients[index - 4];
             if (client) {
                 client.updateAccuracy(clientData.gameplay.accuracy);
-                client.updateScore(clientData.gameplay.mods.str.includes("EZ") ? Number(clientData.gameplay.score) * 2 : clientData.gameplay.score);
+                client.updateScore(clientData.gameplay.mods.str.includes("EZ") ? Number(clientData.gameplay.score) * beatmapSet.find(beatmap => beatmap["beatmapId"] == this.currentMap)?.["ezMultiplier"] : clientData.gameplay.score);
                 client.updateCombo(clientData.gameplay.combo.current);
                 client.updatePlayer(clientData.spectating.name);
             }
@@ -56,6 +57,10 @@ class ScoreTracker {
     }
     updateState(state) {
         this.currentState = state;
+    }
+    updateMap(mapID) {
+        this.currentMap = mapID;
+        console.log(`EZ Multiplier: ${beatmapSet.find(beatmap => beatmap["beatmapId"] == this.currentMap)?.["ezMultiplier"]}`);
     }
 }
 
@@ -405,6 +410,7 @@ socket.onmessage = async event => {
         currentFile = file;
         currentStats = stats;
         updateBeatmapDetails(data);
+        scoreTracker.updateMap(data.menu.bm.id);
     }
 
     let beatmapID = data.menu.bm.id;
@@ -413,21 +419,13 @@ socket.onmessage = async event => {
         banCount == 4 && autoPick ? updateDetails(beatmapID) : null;
     }
 
-    // tempLeft = data.tourney.manager.teamName.left;
-    // tempRight = data.tourney.manager.teamName.right;
-
-    tempLeft = "中部";
-    tempRight = "近畿";
-
-    // tempLeft = "Team 1";
-    // tempRight = "Team 2";
+    tempLeft = data.tourney.manager.teamName.left;
+    tempRight = data.tourney.manager.teamName.right;
 
     // Player Names
     if (tempLeft != playerOne.innerHTML) {
         setTimeout(function (event) {
             playerOne.innerHTML = tempLeft;
-            currentStage = getCurrentStage()
-            stageText.innerHTML = currentStage;
             leftPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempLeft)?.["teamMembers"].join(", ");
             leftTeam = tempLeft;
         }, 150);
@@ -443,6 +441,8 @@ socket.onmessage = async event => {
     if (!hasSetup) {
         setupBeatmaps();
         setupClients();
+        currentStage = getCurrentStage()
+        stageText.innerHTML = currentStage;
     }
 
     updateTeamLineups(data.tourney.ipcClients);
