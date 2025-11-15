@@ -423,21 +423,25 @@ socket.onmessage = async event => {
     tempRight = data.tourney.manager.teamName.right;
 
     // Player Names
-    if (tempLeft != playerOne.innerHTML) {
+    if (tempLeft != playerOne.innerHTML && tempLeft != "" && tempLeft != null) {
         setTimeout(function (event) {
             playerOne.innerHTML = tempLeft;
-            adjustFont(playerOne, 272, 42);
             leftPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempLeft)?.["teamMembers"].join(", ");
             leftTeam = tempLeft;
         }, 150);
+        setTimeout(function (event) {
+            adjustFont(playerOne, 272, 42);
+        }, 500);
     }
-    if (tempRight != playerTwo.innerHTML) {
+    if (tempRight != playerTwo.innerHTML && tempRight != "" && tempRight != null) {
         setTimeout(function (event) {
             playerTwo.innerHTML = tempRight;
-            adjustFont(playerTwo, 272, 42);
             rightPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempRight)?.["teamMembers"].join(". ");
             rightTeam = tempRight;
         }, 150);
+        setTimeout(function (event) {
+            adjustFont(playerTwo, 272, 42);
+        }, 500);
     }
 
     if (!hasSetup) {
@@ -1199,6 +1203,7 @@ function updateTeamLineups(clients) {
 }
 
 function adjustFont(title, boundaryWidth, originalFontSize) {
+    console.log(title.scrollWidth, boundaryWidth);
     if (title.scrollWidth > boundaryWidth) {
         let ratio = (title.scrollWidth / boundaryWidth);
         title.style.fontSize = `${originalFontSize / ratio}px`;
