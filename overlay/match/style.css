@@ -231,7 +231,8 @@
 }
 
 #leftName, #rightName {
-    font-size: 42px;;
+    width:fit-content;
+    font-size: 42px;
     font-family: 'LINESeed-Bold';
 }
 

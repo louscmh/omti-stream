@@ -426,6 +426,7 @@ socket.onmessage = async event => {
     if (tempLeft != playerOne.innerHTML) {
         setTimeout(function (event) {
             playerOne.innerHTML = tempLeft;
+            adjustFont(playerOne, 272, 42);
             leftPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempLeft)?.["teamMembers"].join(", ");
             leftTeam = tempLeft;
         }, 150);
@@ -433,6 +434,7 @@ socket.onmessage = async event => {
     if (tempRight != playerTwo.innerHTML) {
         setTimeout(function (event) {
             playerTwo.innerHTML = tempRight;
+            adjustFont(playerTwo, 272, 42);
             rightPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempRight)?.["teamMembers"].join(". ");
             rightTeam = tempRight;
         }, 150);
@@ -1194,4 +1196,13 @@ function updateTeamLineups(clients) {
     leftTeamLineup.innerHTML = leftTeam;
     rightTeamLineup.innerHTML = rightTeam;
 
+}
+
+function adjustFont(title, boundaryWidth, originalFontSize) {
+    if (title.scrollWidth > boundaryWidth) {
+        let ratio = (title.scrollWidth / boundaryWidth);
+        title.style.fontSize = `${originalFontSize / ratio}px`;
+    } else {
+        title.style.fontSize = `${originalFontSize}px`;
+    }
 }
