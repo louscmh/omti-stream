@@ -1204,7 +1204,5 @@ function adjustFont(title, boundaryWidth, originalFontSize) {
     if (title.scrollWidth > boundaryWidth) {
         let ratio = (title.scrollWidth / boundaryWidth);
         title.style.fontSize = `${originalFontSize / ratio}px`;
-    } else {
-        title.style.fontSize = `${originalFontSize}px`;
     }
 }
