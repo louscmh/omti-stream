@@ -60,7 +60,7 @@ class ScoreTracker {
     }
     updateMap(mapID) {
         this.currentMap = mapID;
-        console.log(`EZ Multiplier: ${beatmapSet.find(beatmap => beatmap["beatmapId"] == this.currentMap)?.["ezMultiplier"]}`);
+        // console.log(`EZ Multiplier: ${beatmapSet.find(beatmap => beatmap["beatmapId"] == this.currentMap)?.["ezMultiplier"]}`);
     }
 }
 
@@ -424,21 +424,17 @@ socket.onmessage = async event => {
 
     // Player Names
     if (tempLeft != playerOne.innerHTML && tempLeft != "" && tempLeft != null) {
-        setTimeout(function (event) {
-            playerOne.innerHTML = tempLeft;
-            leftPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempLeft)?.["teamMembers"].join(", ");
-            leftTeam = tempLeft;
-        }, 150);
+        playerOne.innerHTML = tempLeft;
+        leftTeam = tempLeft;
+        leftPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempLeft)?.["teamMembers"].join(", ");
         setTimeout(function (event) {
             adjustFont(playerOne, 272, 42);
         }, 500);
     }
     if (tempRight != playerTwo.innerHTML && tempRight != "" && tempRight != null) {
-        setTimeout(function (event) {
-            playerTwo.innerHTML = tempRight;
-            rightPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempRight)?.["teamMembers"].join(". ");
-            rightTeam = tempRight;
-        }, 150);
+        playerTwo.innerHTML = tempRight;
+        rightPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempRight)?.["teamMembers"].join(". ");
+        rightTeam = tempRight;
         setTimeout(function (event) {
             adjustFont(playerTwo, 272, 42);
         }, 500);
@@ -927,7 +923,7 @@ async function updateBeatmapDetails(data) {
     // console.log(id);
     if (beatmapIDS.includes(id)) {
         pick = beatmapSet.find(beatmap => beatmap["beatmapId"] === id)["pick"];
-        customMappers = beatmapSet.find(beatmap => beatmap["beatmapId"] === id)?.["mappers"].join(", ");
+        customMappers = beatmapSet.find(beatmap => beatmap["beatmapId"] === id)?.["mappers"];
         let mod = pick.substring(0, 2).toUpperCase();
         if (mod == "HR") {
             memoryOD = Math.min(memoryOD * 1.4, 10);
@@ -1203,6 +1199,7 @@ function updateTeamLineups(clients) {
 }
 
 function adjustFont(title, boundaryWidth, originalFontSize) {
+    console.log(title.innerHTML);
     console.log(title.scrollWidth, boundaryWidth);
     if (title.scrollWidth > boundaryWidth) {
         let ratio = (title.scrollWidth / boundaryWidth);
