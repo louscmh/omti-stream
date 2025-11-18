@@ -393,6 +393,13 @@ socket.onmessage = async event => {
     if (!hasImported) return;
     let data = JSON.parse(event.data);
 
+    if (!hasSetup) {
+        setupBeatmaps();
+        setupClients();
+        currentStage = getCurrentStage()
+        stageText.innerHTML = currentStage;
+    }
+
     if (previousState != data.tourney.manager.ipcState) {
         checkState(data.tourney.manager.ipcState);
         scoreTracker.updateState(data.tourney.manager.ipcState);
@@ -418,7 +425,7 @@ socket.onmessage = async event => {
         currentBeatmap = beatmapID;
         banCount == 4 && autoPick ? updateDetails(beatmapID) : null;
     }
-
+    
     tempLeft = data.tourney.manager.teamName.left;
     tempRight = data.tourney.manager.teamName.right;
 
@@ -427,24 +434,17 @@ socket.onmessage = async event => {
         playerOne.innerHTML = tempLeft;
         leftTeam = tempLeft;
         leftPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempLeft)?.["teamMembers"].join(", ");
-        setTimeout(function (event) {
-            adjustFont(playerOne, 272, 42);
-        }, 500);
+        // setTimeout(function (event) {
+        //     adjustFont(playerOne, 272, 42);
+        // }, 500);
     }
     if (tempRight != playerTwo.innerHTML && tempRight != "" && tempRight != null) {
         playerTwo.innerHTML = tempRight;
         rightPlayerOne.innerHTML = teams.find(team => team["teamName"] === tempRight)?.["teamMembers"].join(". ");
         rightTeam = tempRight;
-        setTimeout(function (event) {
-            adjustFont(playerTwo, 272, 42);
-        }, 500);
-    }
-
-    if (!hasSetup) {
-        setupBeatmaps();
-        setupClients();
-        currentStage = getCurrentStage()
-        stageText.innerHTML = currentStage;
+        // setTimeout(function (event) {
+        //     adjustFont(playerTwo, 272, 42);
+        // }, 500);
     }
 
     updateTeamLineups(data.tourney.ipcClients);

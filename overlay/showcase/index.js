@@ -29,7 +29,7 @@ let currentStage;
             offlineData.push(beatmap);
         });
         const jsonData_3 = await $.getJSON("../../_data/stage_t1.json");
-        jsonData_3.map((stage,index) => {
+        jsonData_3.map((stage, index) => {
             if (index == 0) {
                 currentStage = stage.currentStage;
             } else {
@@ -61,7 +61,7 @@ let currentScene = "showcase"
 const beatmapsStore = new Set(); // Store beatmapID;
 
 // CONTROL PANELS //////////
-sceneButton.addEventListener("click", async function(event) {
+sceneButton.addEventListener("click", async function (event) {
     if (currentScene == "showcase" && generated) {
         await promptOverview();
         sceneButton.style.backgroundColor = "rgb(85, 4, 139)";
@@ -102,6 +102,7 @@ class ShowcaseManager {
         this.showcaseText = document.getElementById("asset_1");
         this.overviewStage = document.getElementById("overviewStage");
         this.overviewDetails = document.getElementById("overviewDetails");
+        this.ezAsset = document.getElementById("ez");
         this.metadata;
         this.stats = [];
         this.beatmapSet = beatmapSet;
@@ -110,7 +111,7 @@ class ShowcaseManager {
         this.generate();
     }
     async generate() {
-        this.showcaseText.setAttribute("src",stages.find(stage => stage.stage == currentStage)["showcase"]);
+        this.showcaseText.setAttribute("src", stages.find(stage => stage.stage == currentStage)["showcase"]);
         this.overviewStage.innerHTML = stages.find(stage => stage.stage == currentStage)["stageName"];
         this.overviewDetails.innerHTML = stages.find(stage => stage.stage == currentStage)["overviewText"];
         for (let i = 0; i < this.beatmapSet.length; i++) {
@@ -128,7 +129,7 @@ class ShowcaseManager {
             this.pickName.setAttribute("class", "pickName");
             this.pickOverlay.setAttribute("class", "pickOverlay");
             this.pickSource.setAttribute("class", "pickSource");
-            
+
             if (i >= 4) {
                 this.pickItem.setAttribute("class", "pickItem");
                 this.pickName.setAttribute("class", "pickName lastPick");
@@ -147,7 +148,7 @@ class ShowcaseManager {
             try {
                 this.pickSource.setAttribute("src", `http://127.0.0.1:24050/Songs/${mapData.menu.bm.path.full}?a=${Math.random(10000)}`);
             } catch (e) {
-                this.pickSource.setAttribute("src","../../../_shared_assets/design/main_banner.png");
+                this.pickSource.setAttribute("src", "../../../_shared_assets/design/main_banner.png");
             }
 
             this.pickQueueAsset.appendChild(this.pickItem);
@@ -160,13 +161,13 @@ class ShowcaseManager {
         console.log("Completed Setup!");
     }
     move(moveIndex) {
-        let distance = 332+18;
-        this.pickQueueAsset.style.transform = `translateX(-${distance*(this.revealed + moveIndex - 3)}px)`;
+        let distance = 332 + 18;
+        this.pickQueueAsset.style.transform = `translateX(-${distance * (this.revealed + moveIndex - 3)}px)`;
         this.beatmapSet.map((beatmap, index) => {
             let pickName = document.getElementById(`${index}pickName`);
             let pickOverlay = document.getElementById(`${index}pickOverlay`);
             let pickSource = document.getElementById(`${index}pickSource`);
-            if (index < this.revealed+moveIndex+1) {
+            if (index < this.revealed + moveIndex + 1) {
                 pickName.style.opacity = 1;
                 pickOverlay.style.backgroundImage = "linear-gradient(to right, rgba(0,0,0,0.5) ,rgba(0,0,0,0.5))";
                 pickSource.style.opacity = 1;
@@ -176,7 +177,7 @@ class ShowcaseManager {
                 pickSource.style.opacity = 0;
             }
             // console.log(this.revealed+moveIndex-3);
-            if (index == this.revealed+moveIndex-3) {
+            if (index == this.revealed + moveIndex - 3) {
                 pickSource.style.filter = "blur(0px)";
             } else {
                 pickSource.style.filter = "blur(14px)";
@@ -185,13 +186,13 @@ class ShowcaseManager {
         this.revealed += moveIndex;
     }
     hideall() {
-        let distance = 332+18;
+        let distance = 332 + 18;
         this.pickQueueAsset.style.transform = `translateX(0px)`;
         this.beatmapSet.map((beatmap, index) => {
             let pickName = document.getElementById(`${index}pickName`);
             let pickOverlay = document.getElementById(`${index}pickOverlay`);
             let pickSource = document.getElementById(`${index}pickSource`);
-            if (index < this.revealed+1) {
+            if (index < this.revealed + 1) {
                 pickName.style.opacity = 1;
                 pickOverlay.style.backgroundImage = "linear-gradient(to right, rgba(0,0,0,0.5) ,rgba(0,0,0,0.5))";
                 pickSource.style.opacity = 1;
@@ -213,11 +214,11 @@ class ShowcaseManager {
         let { full } = data.menu.bm.time;
         let { difficulty, mapper, artist, title } = data.menu.bm.metadata;
         difficulty = difficulty.replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
         title = title.replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;");
         let file = data.menu.bm.path.file;
         let index;
         let pick;
@@ -226,87 +227,92 @@ class ShowcaseManager {
         let modOD;
         let modAR;
         let modCS;
-    
+
         // console.log(file);
-    
+
         // CHECKER FOR MAPPICK
         if (beatmaps.includes(id)) {
             index = beatmapSet.findIndex(beatmap => beatmap["beatmapId"] === id);
             pick = beatmapSet[index]["pick"];
             customMapper = beatmapSet[index]["mappers"];
-            mod = pick.substring(0,2).toUpperCase();
+            mod = pick.substring(0, 2).toUpperCase();
             if (mod == "HR" || mod == "FM") {
-                modOD = Math.min(memoryOD*1.4, 10).toFixed(1);
-                modCS = Math.min(memoryCS*1.3, 10).toFixed(1);
-                modAR = Math.min(memoryAR*1.4, 10).toFixed(1);
+                modOD = Math.min(memoryOD * 1.4, 10).toFixed(1);
+                modCS = Math.min(memoryCS * 1.3, 10).toFixed(1);
+                modAR = Math.min(memoryAR * 1.4, 10).toFixed(1);
             } else if (mod == "DT") {
                 modOD = Math.min((79.5 - (Math.min(79.5, Math.max(19.5, 79.5 - Math.ceil(6 * memoryOD))) / 1.5)) / 6, 1.5 > 1.5 ? 12 : 11).toFixed(2);
                 let ar_ms = Math.max(Math.min(memoryAR <= 5 ? 1800 - 120 * memoryAR : 1200 - 150 * (memoryAR - 5), 1800), 450) / 1.5;
                 modAR = ar_ms > 1200 ? ((1800 - ar_ms) / 120).toFixed(2) : (5 + (1200 - ar_ms) / 150).toFixed(1);
-                full = full/1.5;
-                min = Math.round(min*1.5);
-                max = Math.round(max*1.5);
+                full = full / 1.5;
+                min = Math.round(min * 1.5);
+                max = Math.round(max * 1.5);
             }
-            this.move(index-this.currentPick);
+            this.move(index - this.currentPick);
             this.currentPick = index;
         } else if (beatmaps.includes(file)) {
             index = beatmapSet.findIndex(beatmap => beatmap["beatmapId"] === file);
             pick = beatmapSet[index]["pick"];
             customMapper = beatmapSet[index]["mappers"];
-            mod = pick.substring(0,2).toUpperCase();
+            mod = pick.substring(0, 2).toUpperCase();
             if (mod == "HR" || mod == "FM") {
-                modOD = Math.min(memoryOD*1.4, 10).toFixed(2);
+                modOD = Math.min(memoryOD * 1.4, 10).toFixed(2);
             } else if (mod == "DT") {
                 modOD = Math.min((79.5 - (Math.min(79.5, Math.max(19.5, 79.5 - Math.ceil(6 * memoryOD))) / 1.5)) / 6, 1.5 > 1.5 ? 12 : 11).toFixed(2);
-                full = full/1.5;
-                min = Math.round(min*1.5);
-                max = Math.round(max*1.5);
+                full = full / 1.5;
+                min = Math.round(min * 1.5);
+                max = Math.round(max * 1.5);
             }
-            this.move(index-this.currentPick);
+            this.move(index - this.currentPick);
             this.currentPick = index;
         } else {
             this.hideall();
         }
 
-        setTimeout(function() {
+        setTimeout(function () {
             this.pickAsset.innerHTML = pick == undefined ? "N.A" : pick;
             this.songTitleAsset.innerHTML = title;
             this.artistTitleAsset.innerHTML = artist;
-            this.mapperTextAsset.innerHTML = customMapper != "" ? customMapper:mapper;
+            this.mapperTextAsset.innerHTML = customMapper != "" ? customMapper : mapper;
             this.difficultyTextAsset.innerHTML = difficulty;
             this.odAsset.innerHTML = (mod == "DT" || mod == "FM" || mod == "HR") ? `${Number(memoryOD).toFixed(1)} (${Number(modOD).toFixed(1)})` : Number(memoryOD).toFixed(1);
-            try {
-                this.srAsset.innerHTML = (mod == "DT" || mod == "FM" || mod == "HR" || mod == "HD") ? `${beatmapSet[index]?.originalSR}* (${beatmapSet[index]?.modSR ?? fullSR}*)` : `${fullSR}*`;
-              } catch (e) {
-                console.warn("beatmapSet[index] is undefined, falling back to fullSR");
+            if (beatmaps.includes(id)) {
+                try {
+                    this.ezAsset.innerHTML = (mod == "FM"|| mod == "TB") ? `EZ Multiplier: ${beatmapSet[index]?.ezMultiplier}` : "";
+                    this.srAsset.innerHTML = (mod == "DT" || mod == "FM" || mod == "HR" || mod == "HD") ? `${beatmapSet[index]?.originalSR}* (${beatmapSet[index]?.modSR ?? beatmapSet[index]?.originalSR}*)` : `${beatmapSet[index]?.originalSR}*`;
+                } catch (e) {
+                    console.warn("beatmapSet[index] is undefined, falling back to fullSR");
+                    this.srAsset.innerHTML = `${fullSR}*`;
+                }
+            } else {
                 this.srAsset.innerHTML = `${fullSR}*`;
-              }
+            }
             this.arAsset.innerHTML = (mod == "DT" || mod == "FM" || mod == "HR") ? `${Number(memoryAR).toFixed(1)} (${Number(modAR).toFixed(1)})` : Number(memoryAR).toFixed(1);
             this.csAsset.innerHTML = (mod == "FM" || mod == "HR") ? `${Number(memoryCS).toFixed(1)} (${Number(modCS).toFixed(1)})` : Number(memoryCS).toFixed(1);
             this.bpmAsset.innerHTML = min === max ? min : `${min} - ${max}`;
             this.lengthAsset.innerHTML = parseTime(full);
             // this.modpoolAsset.innerHTML = mod == "TB" ? "&#8202;TB" : mod;
-        
+
             // BG
             try {
-                if(tempBG !== data.menu.bm.path.full){
+                if (tempBG !== data.menu.bm.path.full) {
                     tempBG = data.menu.bm.path.full;
-                    data.menu.bm.path.full = data.menu.bm.path.full.replace(/#/g,'%23').replace(/%/g,'%25');
-                    this.sourceAsset.setAttribute('src',`http://127.0.0.1:24050/Songs/${data.menu.bm.path.full}?a=${Math.random(10000)}`);
+                    data.menu.bm.path.full = data.menu.bm.path.full.replace(/#/g, '%23').replace(/%/g, '%25');
+                    this.sourceAsset.setAttribute('src', `http://127.0.0.1:24050/Songs/${data.menu.bm.path.full}?a=${Math.random(10000)}`);
                 }
             } catch (e) {
-                this.sourceAsset.setAttribute('src',"../../../_shared_assets/design/main_banner.png");
+                this.sourceAsset.setAttribute('src', "../../../_shared_assets/design/main_banner.png");
             }
-    
-            this.adjustFont(this.songTitleAsset,700,48);
-        
-            this.makeScrollingText(this.difficultyTextAsset, this.difficultyTextDelayAsset,20,340,40);
-        }.bind(this),1000)
+
+            this.adjustFont(this.songTitleAsset, 700, 48);
+
+            this.makeScrollingText(this.difficultyTextAsset, this.difficultyTextDelayAsset, 20, 340, 40);
+        }.bind(this), 1000)
     }
     adjustFont(title, boundaryWidth, originalFontSize) {
         if (title.scrollWidth > boundaryWidth) {
-            let ratio = (title.scrollWidth/boundaryWidth);
-            title.style.fontSize = `${originalFontSize/ratio}px`;
+            let ratio = (title.scrollWidth / boundaryWidth);
+            title.style.fontSize = `${originalFontSize / ratio}px`;
         } else {
             title.style.fontSize = `${originalFontSize}px`;
         }
@@ -314,10 +320,10 @@ class ShowcaseManager {
     makeScrollingText(title, titleDelay, rate, boundaryWidth, padding) {
         if (title.scrollWidth > boundaryWidth) {
             titleDelay.innerHTML = title.innerHTML;
-            let ratio = (title.scrollWidth/boundaryWidth)*rate
+            let ratio = (title.scrollWidth / boundaryWidth) * rate
             title.style.animation = `scrollText ${ratio}s linear infinite`;
             titleDelay.style.animation = `scrollText ${ratio}s linear infinite`;
-            titleDelay.style.animationDelay = `${-ratio/2}s`;
+            titleDelay.style.animationDelay = `${-ratio / 2}s`;
             titleDelay.style.paddingRight = `${padding}px`;
             title.style.paddingRight = `${padding}px`;
             titleDelay.style.display = "initial";
@@ -331,8 +337,8 @@ class ShowcaseManager {
         }
     }
     updateReplayer(name) {
-        if (name == this.replayer.innerHTML || name == undefined) return;
-        this.replayer.innerHTML = `REPLAY BY ${name}`;
+        if (name == this.replayer.innerHTML || name == undefined || name == "") return;
+        this.replayer.innerHTML = `Replay by ${name}`;
     }
     fadeOut() {
         this.clientAsset.style.animation = "fadeOutRight 1s cubic-bezier(.45,0,1,.48)";
@@ -357,7 +363,7 @@ class ShowcaseManager {
     arraysEqual(a, b) {
         return a.length === b.length && a.every((val, index) => val === b[index]);
     }
-    updateStats(metadata,stats) {
+    updateStats(metadata, stats) {
         this.metadata = metadata;
         this.stats = stats;
     }
@@ -431,8 +437,8 @@ class Beatmap {
         this.mapModpool.innerHTML = this.mods;
         this.mapMapperTitle.innerHTML = "MAPPED BY";
         this.mapDifficultyTitle.innerHTML = "DIFFICULTY";
-        this.mapSource.setAttribute('src',"../../../_shared_assets/design/main_banner.png");
-        
+        this.mapSource.setAttribute('src', "../../../_shared_assets/design/main_banner.png");
+
         clickerObj.appendChild(this.mapDetails);
         clickerObj.appendChild(this.mapModpool);
         clickerObj.appendChild(this.mapOverlay);
@@ -456,22 +462,22 @@ class Beatmap {
 
 
 socket.onmessage = async event => {
-    if (!initialized) {return};
+    if (!initialized) { return };
     let data = JSON.parse(event.data);
 
     if (!hasSetup) {
         hasSetup = true;
         showcaseManager = new ShowcaseManager(beatmapSet);
         await setupBeatmaps();
-    } 
-    
+    }
+
     if (generated) {
         showcaseManager.updateReplayer(data.gameplay.name);
         if (beatmaps.includes(data.menu.bm.path.file)) {
             data = offlineData.find(beatmapData => beatmapData.menu.bm.path.file == data.menu.bm.path.file);
         }
         let tempStats = [data.menu.bm.stats.AR, data.menu.bm.stats.CS, data.menu.bm.stats.OD];
-        if (showcaseManager.metadata != data.menu.bm.path.file && !showcaseManager.arraysEqual(showcaseManager.stats,tempStats)) {
+        if (showcaseManager.metadata != data.menu.bm.path.file && !showcaseManager.arraysEqual(showcaseManager.stats, tempStats)) {
             showcaseManager.updateStats(data.menu.bm.path.file, tempStats);
             showcaseManager.updateDetails(data);
         };
@@ -479,46 +485,46 @@ socket.onmessage = async event => {
 }
 
 const parseTime = ms => {
-	const second = Math.floor(ms / 1000) % 60 + '';
-	const minute = Math.floor(ms / 1000 / 60) + '';
-	return `${'0'.repeat(2 - minute.length) + minute}:${'0'.repeat(2 - second.length) + second}`;
+    const second = Math.floor(ms / 1000) % 60 + '';
+    const minute = Math.floor(ms / 1000 / 60) + '';
+    return `${'0'.repeat(2 - minute.length) + minute}:${'0'.repeat(2 - second.length) + second}`;
 }
 
 async function makeScrollingText(title, titleDelay, rate, boundaryWidth, padding) {
     if (title.scrollWidth > boundaryWidth) {
         titleDelay.innerHTML = title.innerHTML;
-		let ratio = (title.scrollWidth/boundaryWidth)*rate
-		title.style.animation = `scrollText ${ratio}s linear infinite`;
-		titleDelay.style.animation = `scrollText ${ratio}s linear infinite`;
-		titleDelay.style.animationDelay = `${-ratio/2}s`;
-		titleDelay.style.paddingRight = `${padding}px`;
-		title.style.paddingRight = `${padding}px`;
+        let ratio = (title.scrollWidth / boundaryWidth) * rate
+        title.style.animation = `scrollText ${ratio}s linear infinite`;
+        titleDelay.style.animation = `scrollText ${ratio}s linear infinite`;
+        titleDelay.style.animationDelay = `${-ratio / 2}s`;
+        titleDelay.style.paddingRight = `${padding}px`;
+        title.style.paddingRight = `${padding}px`;
         titleDelay.style.marginTop = `-${title.offsetHeight}px`;
         titleDelay.style.display = "initial";
     } else {
         titleDelay.style.display = "none";
-		title.style.animation = "none";
-		titleDelay.style.animation = "none";
-		titleDelay.style.paddingRight = "0px";
+        title.style.animation = "none";
+        titleDelay.style.animation = "none";
+        titleDelay.style.paddingRight = "0px";
         titleDelay.style.marginTop = `0px`;
-		title.style.paddingRight = "0px";
-	}
+        title.style.paddingRight = "0px";
+    }
 }
 
 async function promptOverview() {
     document.getElementById("bg_overview").style.clipPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
     document.getElementById("bg_overview").play();
 
-    setTimeout(function() {
+    setTimeout(function () {
         showcaseManager.fadeOut();
-    },500);
-    
-    setTimeout(function() {
+    }, 500);
+
+    setTimeout(function () {
         overviewScene.style.opacity = 1;
         overviewScene.style.animation = "fadeInLeft 1s cubic-bezier(0.000, 0.125, 0.000, 1.005)";
         document.getElementById("bg").pause();
         currentScene = "overview";
-    },1500);
+    }, 1500);
 }
 
 async function promptShowcase() {
@@ -527,16 +533,16 @@ async function promptShowcase() {
     overviewScene.style.animation = "fadeOutRight 1s cubic-bezier(.45,0,1,.48)";
     document.getElementById("bg").play();
 
-    setTimeout(function() {
+    setTimeout(function () {
         showcaseManager.fadeIn();
-    },1000);
+    }, 1000);
 
-    
-    setTimeout(function() {
+
+    setTimeout(function () {
         document.getElementById("bg_overview").style.clipPath = "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)";
         document.getElementById("bg_overview").pause();
         currentScene = "showcase";
-    },2000);
+    }, 2000);
 }
 
 const mods = {
@@ -560,20 +566,20 @@ async function setupBeatmaps() {
 
     (function countMods() {
         beatmapSet.map((beatmap) => {
-            modsCount[beatmap.pick.substring(0,2)]++;
+            modsCount[beatmap.pick.substring(0, 2)]++;
         });
     })();
 
     let row = -1;
     let preMod = 0;
     let colIndex = 0;
-    beatmapSet.map(async(beatmap, index) => {
+    beatmapSet.map(async (beatmap, index) => {
         if (beatmap.mods !== preMod || colIndex % 3 === 0) {
-            preMod = beatmap.pick.substring(0,2);
+            preMod = beatmap.pick.substring(0, 2);
             colIndex = 0;
             row++;
         }
-        const bm = new Beatmap(beatmap.pick.substring(0,2), beatmap.beatmapId, `map${index}`);
+        const bm = new Beatmap(beatmap.pick.substring(0, 2), beatmap.beatmapId, `map${index}`);
         bm.generate();
         // console.log(offlineData[0].menu.bm.path.file);
         // console.log(bm.beatmapId);

@@ -229,9 +229,10 @@
     height:70px;
 }
 
-#replay {
+#replay, #ez {
     font-size:16px;
     font-family:"Sora-Bold";
+    margin-top:6px;
 }
 
 #pickMask {
