@@ -23,6 +23,20 @@ let beatmapid = document.getElementById("id");
 let data;
 let offlineSet = new Set();
 
+// Add a picks list (order-sensitive). Update this array to the desired picks.
+// Example: let picksList = ["NM1","NM2","NM3"];
+// Optionally, if your HTML contains an input/textarea with id="picks", you can
+// provide a comma-separated list there and it will override the array on change.
+let picksList = ["NM1","NM2","NM3","NM4","NM5","NM6","HD1","HD2","HD3","HR1","HR2",
+  "HR3","DT1","DT2","DT3","DT4","FM1","FM2","FM3","TB"];
+const picksInput = document.getElementById("picks");
+if (picksInput) {
+    picksInput.addEventListener('change', () => {
+        picksList = picksInput.value.split(',').map(s => s.trim()).filter(Boolean);
+        console.log('Picks list set to:', picksList);
+    });
+}
+
 // CONTROL PANELS //////////
 let savedBeatmaps = [];
 const savedBeatmapsList = document.getElementById("savedBeatmapsList");
@@ -69,20 +83,21 @@ copyJSON.addEventListener("click", async function () {
     // Convert Set to Array
     const setArray = Array.from(offlineSet);
   
-    // Format into new structure
-    const formatted = setArray.map(item => {
+    // Format into new structure and assign pick by the capture order (index)
+    const formatted = setArray.map((item, idx) => {
       const beatmapId = item.menu.bm.id !== 0
         ? item.menu.bm.id
         : item.menu.bm.path.file;
   
       return {
         beatmapId: beatmapId,
-        pick: "",
+        pick: picksList[idx] || "", // assign pick based on order; fallback to empty string
         originalSR: item.menu.bm.stats.fullSR,
         modSR: null,
         customSong: false,
         collab: "",
-        mappers: ""
+        mappers: "",
+        ezMultiplier : ""
       };
     });
   

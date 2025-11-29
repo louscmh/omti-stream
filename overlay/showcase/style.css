@@ -357,7 +357,7 @@
     height:1120px;
     font-family: "Sora-ExtraBold";
     font-size:150px;
-    color:black;
+    color: #FFC756;
     display:flex;
     align-items: end;
 }
@@ -370,7 +370,7 @@
     height:1120px;
     font-family: "Sora-ExtraBold";
     font-size:150px;
-    color:black;
+    color:#FFC756;
     display:flex;
     justify-content: end;
     align-items: end;
@@ -385,6 +385,7 @@
     align-items: center;
     justify-content: center;
     height:875px;
+    transform: scale(0.85);
 }
 
 .mapContainer {
@@ -401,7 +402,7 @@
     display:flex;
     position:relative;
     margin-inline: 70px;
-    margin-bottom:30px;
+    margin-block:15px;
 }
 
 .mapDetails {

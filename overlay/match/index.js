@@ -426,8 +426,10 @@ socket.onmessage = async event => {
         banCount == 4 && autoPick ? updateDetails(beatmapID) : null;
     }
     
-    tempLeft = data.tourney.manager.teamName.left;
-    tempRight = data.tourney.manager.teamName.right;
+    // tempLeft = data.tourney.manager.teamName.left;
+    // tempRight = data.tourney.manager.teamName.right;
+    tempLeft = "Fk it we ballin";
+    tempRight = "Kelantan Ronaldo";
 
     // Player Names
     if (tempLeft != playerOne.innerHTML && tempLeft != "" && tempLeft != null) {
