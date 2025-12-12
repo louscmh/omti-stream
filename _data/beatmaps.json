@@ -1,8 +1,8 @@
 [
   {
-    "beatmapId": 3516091,
+    "beatmapId": 4776435,
     "pick": "NM1",
-    "originalSR": 7.02,
+    "originalSR": 7.19,
     "modSR": null,
     "customSong": false,
     "collab": "",
@@ -10,9 +10,9 @@
     "ezMultiplier": ""
   },
   {
-    "beatmapId": 2643115,
+    "beatmapId": 4796035,
     "pick": "NM2",
-    "originalSR": 6.59,
+    "originalSR": 7.13,
     "modSR": null,
     "customSong": false,
     "collab": "",
@@ -20,9 +20,9 @@
     "ezMultiplier": ""
   },
   {
-    "beatmapId": 3299412,
+    "beatmapId": 5418136,
     "pick": "NM3",
-    "originalSR": 6.02,
+    "originalSR": 6.64,
     "modSR": null,
     "customSong": false,
     "collab": "",
@@ -30,9 +30,9 @@
     "ezMultiplier": ""
   },
   {
-    "beatmapId": 4830781,
+    "beatmapId": 3844605,
     "pick": "NM4",
-    "originalSR": 6.43,
+    "originalSR": 6.28,
     "modSR": null,
     "customSong": false,
     "collab": "",
@@ -40,9 +40,9 @@
     "ezMultiplier": ""
   },
   {
-    "beatmapId": 4418140,
+    "beatmapId": 4371460,
     "pick": "NM5",
-    "originalSR": 6.75,
+    "originalSR": 7.18,
     "modSR": null,
     "customSong": false,
     "collab": "",
@@ -50,153 +50,153 @@
     "ezMultiplier": ""
   },
   {
-    "beatmapId": 3501438,
+    "beatmapId": 5089500,
     "pick": "NM6",
-    "originalSR": 5.67,
+    "originalSR": 5.23,
     "modSR": null,
     "customSong": false,
     "collab": "",
-    "mappers": "Len",
+    "mappers": "",
     "ezMultiplier": ""
   },
   {
-    "beatmapId": 4380440,
+    "beatmapId": 3814406,
     "pick": "HD1",
-    "originalSR": 6.49,
-    "modSR": 6.76,
-    "customSong": false,
-    "collab": "",
-    "mappers": "",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 3791682,
-    "pick": "HD2",
-    "originalSR": 5.69,
-    "modSR": 6.01,
-    "customSong": false,
-    "collab": "",
-    "mappers": "Skubi",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 1843575,
-    "pick": "HD3",
-    "originalSR": 6.2,
-    "modSR": 6.47,
-    "customSong": false,
-    "collab": "",
-    "mappers": "NeilPerry & Ameth Rianno",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 4003471,
-    "pick": "HR1",
-    "originalSR": 6.2,
-    "modSR": 6.71,
-    "customSong": false,
-    "collab": "",
-    "mappers": "arkisol, herestotheroc & xytoper",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 441920,
-    "pick": "HR2",
-    "originalSR": 5.75,
-    "modSR": 6.67,
-    "customSong": false,
-    "collab": "",
-    "mappers": "AngelHoney",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 4587097,
-    "pick": "HR3",
-    "originalSR": 5.91,
-    "modSR": 6.34,
-    "customSong": false,
-    "collab": "",
-    "mappers": "",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 539323,
-    "pick": "DT1",
-    "originalSR": 4.99,
-    "modSR": 7.05,
-    "customSong": false,
-    "collab": "",
-    "mappers": "",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 3764144,
-    "pick": "DT2",
-    "originalSR": 4.63,
-    "modSR": 6.71,
-    "customSong": false,
-    "collab": "",
-    "mappers": "",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 3982810,
-    "pick": "DT3",
-    "originalSR": 4.66,
-    "modSR": 6.56,
-    "customSong": false,
-    "collab": "",
-    "mappers": "-Hitomi & Moecho",
-    "ezMultiplier": ""
-  },
-  {
-    "beatmapId": 50625,
-    "pick": "DT4",
-    "originalSR": 4.77,
+    "originalSR": 6.56,
     "modSR": 6.83,
     "customSong": false,
     "collab": "",
+    "mappers": "Agatsu, Kalibe & Deca",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 5061489,
+    "pick": "HD2",
+    "originalSR": 5.61,
+    "modSR": 5.96,
+    "customSong": false,
+    "collab": "",
     "mappers": "",
     "ezMultiplier": ""
   },
   {
-    "beatmapId": 4160997,
+    "beatmapId": 5364444,
+    "pick": "HD3",
+    "originalSR": 6.38,
+    "modSR": 6.73,
+    "customSong": false,
+    "collab": "",
+    "mappers": "nooj & -Doodle",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 5418264,
+    "pick": "HR1",
+    "originalSR": 6.43,
+    "modSR": 7.11,
+    "customSong": true,
+    "collab": "",
+    "mappers": "",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 776951,
+    "pick": "HR2",
+    "originalSR": 6.35,
+    "modSR": 7.24,
+    "customSong": false,
+    "collab": "",
+    "mappers": "",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 3267248,
+    "pick": "HR3",
+    "originalSR": 6.25,
+    "modSR": 6.84,
+    "customSong": false,
+    "collab": "",
+    "mappers": "KKipalt",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 3496317,
+    "pick": "DT1",
+    "originalSR": 5.15,
+    "modSR": 7.26,
+    "customSong": false,
+    "collab": "",
+    "mappers": "",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 69666,
+    "pick": "DT2",
+    "originalSR": 4.92,
+    "modSR": 7.35,
+    "customSong": false,
+    "collab": "",
+    "mappers": "",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 4446253,
+    "pick": "DT3",
+    "originalSR": 4.89,
+    "modSR": 6.99,
+    "customSong": false,
+    "collab": "",
+    "mappers": "toybot & allein",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 3972422,
+    "pick": "DT4",
+    "originalSR": 4.58,
+    "modSR": 6.43,
+    "customSong": false,
+    "collab": "",
+    "mappers": "Deca",
+    "ezMultiplier": ""
+  },
+  {
+    "beatmapId": 2895842,
     "pick": "FM1",
-    "originalSR": 6.76,
+    "originalSR": 6.97,
+    "modSR": 7.22,
+    "customSong": false,
+    "collab": "",
+    "mappers": "",
+    "ezMultiplier": 2.6
+  },
+  {
+    "beatmapId": 3311383,
+    "pick": "FM2",
+    "originalSR": 6.41,
+    "modSR": 7,
+    "customSong": false,
+    "collab": "",
+    "mappers": "",
+    "ezMultiplier": 1.5
+  },
+  {
+    "beatmapId": 5099811,
+    "pick": "FM3",
+    "originalSR": 6.42,
     "modSR": 6.94,
     "customSong": false,
     "collab": "",
     "mappers": "",
-    "ezMultiplier": 2.5
+    "ezMultiplier": 2.4
   },
   {
-    "beatmapId": 5356825,
-    "pick": "FM2",
-    "originalSR": 5.88,
-    "modSR": 6.63,
-    "customSong": false,
-    "collab": "",
-    "mappers": "Wispy",
-    "ezMultiplier": 2.0
-  },
-  {
-    "beatmapId": 1888862,
-    "pick": "FM3",
-    "originalSR": 6.27,
-    "modSR": 6.44,
-    "customSong": false,
-    "collab": "",
-    "mappers": "",
-    "ezMultiplier": 2.8
-  },
-  {
-    "beatmapId": 4889032,
+    "beatmapId": 3907144,
     "pick": "TB",
-    "originalSR": 7.01,
+    "originalSR": 6.71,
     "modSR": null,
     "customSong": false,
     "collab": "",
-    "mappers": "",
-    "ezMultiplier": 3.6
+    "mappers": "Gordon, Mysty, Lince Cosmico",
+    "ezMultiplier": 3.2
   }
 ]
